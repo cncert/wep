@@ -1,29 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <home>
+      </home>
   </div>
 </template>
 
-<style lang="less">
+<script>
+import home from './views/Home.vue'
+
+export default {
+  name: 'app',
+  components: {
+    home
+  }
+}
+</script>
+
+<style>
+body {
+  /* 修改body样式 */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  /* background: url('assets/homepage.jpg'); */
+  
+}
+.el-menu.el-menu--horizontal {
+  border-bottom: solid 0px !important
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
