@@ -1,4 +1,4 @@
-# pet
+# wep
 
 ## Project setup
 ```
